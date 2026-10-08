@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <h1>Cricket Sounds Dashboard</h1>
+</head>
+
+<body>
+    <div class="button-container">
+        <button id="MyButton">Click For Cricket Sounds!</button>
+        <button id="MyButton2">Click To Stop!</button>
+    </div>
+
+    <audio id="MySound" src="crickets.wav" loop></audio>
+
+    <script>
+        const button = document.getElementById("MyButton");
+        const sound = document.getElementById("MySound")
+
+        button.addEventListener("click", function () {
+            sound.play();
+        });
+
+        const stopButton = document.getElementById("MyButton2");
+
+        stopButton.addEventListener("click", function () {
+            sound.pause();
+            sound.currentTime = 0;
+        });
+    </script>
+</body>
+
+</html>
